@@ -68,6 +68,9 @@ h2{
     width: 1000px;
     margin-top: 0px;
 }
+#h3{
+  font-size: 30px;
+}
 .formContact{
     display: flex;
     justify-content: space-around;
@@ -89,12 +92,12 @@ h2{
   }
   .input-contact{
     border: 1px solid grey;
-    width: 250px;
+    width: 350px;
     height: 30px;
     border-radius: 8px;
   }
   .topic{
-    width: 250px;
+    width: 350px;
     height: 75px;
     border-radius: 5px;  
    border: 1px solid grey;
@@ -103,7 +106,7 @@ h2{
     font-family: 'Nanum Gothic', sans-serif;
   }
   .submit{
-    width: 200px;
+    width: 300px;
     height: 40px;
     background-color: #000;
     color: #fff;
@@ -114,6 +117,7 @@ h2{
     font-size: 40px;
     font-family: "Dancing Script", cursive;
   }
+
   .perfume-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -123,7 +127,10 @@ h2{
     max-width: 270px;
     height: 470px;
   }
-  
+  .perfume-card:hover{
+    transition-duration: 0.6s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
   .perfume-image {
     max-width: 100%;
     height: auto;
@@ -181,11 +188,20 @@ h2{
   }
   
   .slogan {
+    margin-left: 25px;
+    width: 1410px;
+    border-radius: 30px;
+    background-color: #add6f7;
+    padding: 30px;
+    border: 3px solid pink;
     text-align: center;
-    margin-top: 20px;
-    font-size: 1.8em;
+    margin-top: 60px;
+    font-size: 45px;
   }
-  
+  .catecorie_bestsellers{
+    text-decoration: none;
+    color: #000;
+  }
   .perfume-cards {
     width: 95%;
     padding: 20px;
@@ -315,4 +331,26 @@ h2{
 }
 .about-div2 img{
   width: 520px;
+}
+.svg-logos svg{
+  margin: 15px;
+  border-radius: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+#scrollToTopMain{
+  width: 50px;
+  height: 50px;
+    right: 20px;
+  background-color:rgb(228, 164, 164); 
+  border: none;
+  padding: 10px;
+  position: fixed;
+  border-radius: 20px;
+ 
+  bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
 }
