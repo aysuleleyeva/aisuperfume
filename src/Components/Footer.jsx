@@ -1,10 +1,10 @@
 import React from 'react'
 import '../App.css';
 import {Link} from 'react-router-dom';
-import { ReactComponent as Instagram } from '../svg/instagram.svg';
-import {ReactComponent as Facebook} from '../svg/facebook2.svg';
-import {ReactComponent as Whatsapp} from '../svg/whatsapp.svg';
-import {ReactComponent as Twitter} from '../svg/twitter2.svg';
+import { ReactComponent as Instagram } from '../instagram.svg';
+import {ReactComponent as Facebook} from '../facebook2.svg';
+import {ReactComponent as Whatsapp} from '../whatsapp.svg';
+import {ReactComponent as Twitter} from '../twitter2.svg';
     const Footer = () => {
   return (
     <div className='footer'>
