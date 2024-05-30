@@ -4,15 +4,39 @@ import './Style.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PerfumeCard from './PerfumeCard';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import Slider from 'react-slick';
 import img1 from './image/perfume4.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import SaleBanner from './SaleBanner';
 import foto1 from './image/Maskgroup1.jpg';
 import foto2 from './image/Maskgroup.png';
-
+import {ReactComponent as Scroll} from '../angle.svg';
 const Main = () => {
  
+  const [showScroll, setShowScroll] = useState(false);
+
+  const scroll = () => {
+    if (window.scrollY > 20) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', scroll);
+    
+    return () => window.removeEventListener('scroll', scroll);
+  }, []);
+
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   const perfumes = [
     {
       id: '1011',
@@ -101,7 +125,7 @@ const Main = () => {
               </tr>
             <tr>
               <td>
-              <p>BEST SELLERS</p>
+              <p><a  className='catecorie_bestsellers' href='#bestsellers'>BEST SELLERS</a></p>
               </td>
             </tr>
             <tr>
@@ -123,7 +147,7 @@ const Main = () => {
         
       <h2 className='slogan'> More than perfume</h2>
       <div className='perfume-cards'>
-        <h4 className='best_seller' >BEST SELLERS</h4>
+        <h4 className='best_seller' id='bestsellers' >BEST SELLERS</h4>
           <Slider {...settings}>
             {perfumes.map((perfume, index) => (
               <PerfumeCard
@@ -155,9 +179,16 @@ const Main = () => {
           </section>
 
           </div>
+          <button id='scrollToTopMain' onClick={scrollToTop}>
+               <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
+</svg>
+
+          </button>
         <br /><br />
     </div>
   )
 }
 
 export default Main
+
